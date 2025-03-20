@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Disaster Management App</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-  <div class="background-bubbles">
-    <!-- Bubbles will be added with JavaScript -->
-  </div>
+<body >
+    
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff7b25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 12h3v8h14v-8h3L12 2z"></path>
+                </svg>
+            </div>
+            <h1>Disaster Management</h1>
+            <p>Login to access the system</p>
+        </div>
+        
+        <form id="loginForm" method="POST" action="/auth/login">
+            <div class="form-group">
+                <label for="user_id">Employee ID</label>
+                <input type="text" name="user_id" id="user_id" class="form-control" required placeholder="Enter your ID">
+            </div>
+            
+            <div class="form-group">
+                <label for="employment">Designation</label>
+                <select name="employment" id="employment" class="form-control" required>
+                    <option value="">Select designation</option>
+                    <option value="Collector">Collector</option>
+                    <option value="General Staff">General Staff</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" required placeholder="Enter your password">
+            </div>
+            
+            <button type="submit" class="btn">Login</button>
+        </form>
+        
+        <div class="footer">
+            <p>Having trouble logging in? <a href="#">Contact support</a></p>
+        </div>
+    </div>
 
-  <div class="login-container">
-    <h2>LOGIN</h2>
-    <form id="login-form">
-      <div class="input-group">
-        <input type="text" id="username" required>
-        <label for="username">Username</label>
-      </div>
-      <div class="input-group">
-        <input type="password" id="password" required>
-        <label for="password">Password</label>
-      </div>
-      <div class="remember-forgot">
-        <label><input type="checkbox"> Remember me</label>
-        <a href="#">Forgot Password?</a>
-      </div>
-      <button type="submit" class="login-btn">LOGIN</button>
-      <div class="register-link">
-        <p>Don't have an account? <a href="#">Register</a></p>
-      </div>
-    </form>
-  </div>
-  <script src="logscr.js"></script>
+    <script src="{{ url_for('static', filename='login.js') }}"></script>
 </body>
 </html>
