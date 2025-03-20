@@ -61,10 +61,3 @@ inputs.forEach(input => {
         }
     });
 });
-const socialButtons = document.querySelectorAll('.social-icon');
-socialButtons.forEach(button => {
-    button.addEventListener('click', function () {
-        const platform = this.classList[1];
-        alert(`${platform} login clicked. This would connect to the ${platform} authentication API.`);
-    });
-});
