@@ -1,51 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disaster Management App</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disaster Management App</title>
+  <link rel="stylesheet" href="logstyle.css">
 </head>
-
 <body>
-    <center>
-        <h1>Login</h1>
-        <div class="main">
-            <ol>
-                <li align="left">Enter your ID:</li><br/>
-                <input type="text" id="id">
-                <br/><br/>
-                <li align="left">Select your employement:</li><br/>
-                <select id="et">
-                    <option></option>
-                    <option>Collector</option>
-                    <option>General Staff</option>
-                </select>
-                <br/><br/>
-                <li align="left">Enter your password:</li><br/>
-                <input type="password" id="pw">
-            </ol>
-            <button onclick="verify();" id="btn">Login</button>
-        </div>
-    </center>
-    <script>
-        const id=document.getElementById("id");
-        const emp=document.getElementById("et");
-        const btn=document.getElementById("btn");
-            function verify(){
-                if(id.value===""||emp.value==="")
-                    alert("Please enter the required details to login");
-                else
-                    alert("You are logged in successfully");
-            }
-            document.addEventListener("keydown",
-                function(e){
-                    if(e.key==="Enter")
-                    btn.click();
-                }
-            )
-    </script>
-</body>
+  <div class="background-bubbles">
+    <!-- Bubbles will be added with JavaScript -->
+  </div>
 
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <form id="login-form">
+      <div class="input-group">
+        <input type="text" id="username" required>
+        <label for="username">Username</label>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" required>
+        <label for="password">Password</label>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button type="submit" class="login-btn">LOGIN</button>
+      <div class="register-link">
+        <p>Don't have an account? <a href="#">Register</a></p>
+      </div>
+    </form>
+  </div>
+  <script src="logscr.js"></script>
+</body>
 </html>
