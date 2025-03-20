@@ -1,1 +1,31 @@
-
+*{
+    font-family: "Roboto";
+}
+.main{
+    border: 1px solid black;
+    background: #f9f9f9;
+    width: 320px;
+    height: 320px;
+}
+input,select{
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 150px;
+    transform: translateX(-60px);
+}
+option{
+    border: black 10px solid;
+    width: 10vh;
+    height: 10vh;
+}
+button{
+    transform: translateY(10px);
+    padding: 3px;
+    color: #fff;
+    background: blue;
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 80px;
+    cursor: pointer;
+}
