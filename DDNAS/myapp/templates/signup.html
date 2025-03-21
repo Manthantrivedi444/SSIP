@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disaster Management App</title>
+  <link rel="stylesheet" href="signstyle.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Left Section (Image) -->
+    <div class="image-section">
+      <div class="image-overlay">
+        <h1>Disaster Management App</h1><br/><br/>
+        <p class="image-text">This app is meant to provide the notification to its users about various natural disasters
+          like cyclone, flood t-sunami, etc.. through SMS</p><br/>
+        <p class="image-text"><b>"BE THE FIRST PERSON TO RECEIVE ALERTS ABOUT UPCOMING DISASTER"</b></p>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section">
+      <h1>Create Account</h1><br/>
+      <p>Please fill in the form below to get started</p><br/>
+      <form id="signup-form">
+        <div class="input-group">
+          <input type="text" id="fullname" required><br/>
+          <label for="fullname">Name</label><br/>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="email" required>
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" required>
+          <label for="password">Password</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="confirm-password" required>
+          <label for="confirm-password">Confirm Password</label>
+        </div>
+
+        <button type="submit" class="signup-btn">CREATE ACCOUNT</button>
+      </form>
+
+      <div class="login-link">
+        Already have an account? <a href="login.html">Log in</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="signscr.js"></script>
+</body>
+
+</html>
