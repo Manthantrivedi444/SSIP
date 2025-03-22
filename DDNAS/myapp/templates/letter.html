@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Letter Writing System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/letter.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff7b25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 8V21a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8"></path>
+                    <path d="M10 2v9l2-2 2 2V2"></path>
+                </svg>
+            </div>
+            <h2>Letter System</h2>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#"><span>New Letter</span></a></li>
+                <li><a href="#"><span>Drafts</span></a></li>
+                <li><a href="#"><span>Sent</span></a></li>
+                <li><a href="#"><span>Templates</span></a></li>
+                <li><a href="#"><span>Settings</span></a></li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <div class="user-avatar">C</div>
+            <div class="user-details">
+                <p class="user-name">Collector</p>
+                <p class="user-role">District Office</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Create New Letter</h1>
+            <div class="actions">
+                <button id="saveAsDraft" class="btn btn-secondary">Save as Draft</button>
+                <button id="previewLetter" class="btn btn-secondary">Preview</button>
+                <button id="sendLetter" class="btn btn-primary">Send Letter</button>
+            </div>
+        </header>
+
+        <div class="letter-form">
+            <div class="form-group">
+                <label for="letterType">Letter Type</label>
+                <select id="letterType" class="form-control">
+                    <option value="">Select Letter Type</option>
+                    <option value="official">Official Communication</option>
+                    <option value="notice">Public Notice</option>
+                    <option value="directive">Directive</option>
+                    <option value="emergency">Emergency Order</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="referenceNumber">Reference Number</label>
+                    <input type="text" id="referenceNumber" class="form-control" placeholder="e.g. DCO/2025/032">
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="recipient">To</label>
+                <input type="text" id="recipient" class="form-control" placeholder="Recipient Name/Department">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" class="form-control" placeholder="Brief subject of the letter">
+            </div>
+
+            <div class="form-group">
+                <label for="content">Letter Content</label>
+                <div id="toolbar">
+                    <button class="format-btn" data-command="bold" title="Bold">B</button>
+                    <button class="format-btn" data-command="italic" title="Italic"><i>I</i></button>
+                    <button class="format-btn" data-command="underline" title="Underline"><u>U</u></button>
+                    <button class="format-btn" data-command="insertUnorderedList" title="Bullet List">•</button>
+                    <button class="format-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+                    <button class="format-btn" data-command="justifyLeft" title="Align Left">L</button>
+                    <button class="format-btn" data-command="justifyCenter" title="Align Center">C</button>
+                    <button class="format-btn" data-command="justifyRight" title="Align Right">R</button>
+                </div>
+                <div id="editor" class="form-control" contenteditable="true"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="signature">Signature</label>
+                <select id="signature" class="form-control">
+                    <option value="default">Default Signature</option>
+                    <option value="formal">Formal Signature</option>
+                    <option value="simple">Simple Signature</option>
+                    <option value="none">No Signature</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="attachments">Attachments</label>
+                <div class="file-upload">
+                    <input type="file" id="attachments" multiple class="form-control-file">
+                    <button class="btn btn-secondary" id="attachBtn">Select Files</button>
+                    <span id="fileList">No files selected</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="letterPreview" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Letter Preview</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div id="previewContent" class="modal-body">
+                <div class="preview-letter">
+                    <!-- Letter preview will be inserted here -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-btn">Close</button>
+                <button class="btn btn-primary" id="printLetter">Print</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/letter.js') }}"></script>
+    <script>
+        // Dark mode toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            
+            // Check for saved theme preference or default to 'light'
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            // Update button state based on current theme
+            updateThemeToggle(savedTheme);
+            
+            // Toggle theme when button is clicked
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                
+                updateThemeToggle(newTheme);
+            });
+            
+            function updateThemeToggle(theme) {
+                if (theme === 'dark') {
+                    themeToggle.classList.add('dark-mode-active');
+                } else {
+                    themeToggle.classList.remove('dark-mode-active');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

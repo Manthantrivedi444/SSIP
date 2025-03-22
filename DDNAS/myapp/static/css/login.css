@@ -1,0 +1,182 @@
+:root {
+    --orange-primary: #ff7b25;
+    --orange-secondary: #ff9a56;
+    --orange-light: #fff0e6;
+    --white: #ffffff;
+    --gray-light: #f7f7f7;
+    --gray-medium: #e0e0e0;
+    --text-dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url('disaster.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Fix overlay issue */
+body::before {
+    content: '';
+    position: fixed; /* Ensure it covers the whole screen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Stronger dimming effect */
+    z-index: -1; /* Push it behind everything */
+}
+
+.container {
+    max-width: 400px;
+    width: 90%; /* Responsive width */
+    margin: 30px auto; /* Reduced top/bottom margin for smaller screens */
+    padding: 25px; /* Slightly reduced padding */
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px; /* Reduced margin */
+}
+
+.header h1 {
+    color: var(--orange-primary);
+    font-size: 24px; /* Reduced font size for smaller screens */
+    font-weight: 600;
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.header .logo {
+    width: 70px; /* Reduced logo size */
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--orange-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px; /* Reduced margin */
+}
+
+.header .logo svg {
+    color: var(--orange-primary);
+    width: 40px; /* Adjust svg size */
+    height: 40px;
+}
+
+.form-group {
+    margin-bottom: 18px; /* Reduced margin */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px; /* Reduced margin */
+    font-weight: 500;
+    font-size: 15px; /* Slightly smaller font */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 12px; /* Reduced padding */
+    border: 1px solid var(--gray-medium);
+    border-radius: 6px;
+    font-size: 15px; /* Reduced font size */
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--orange-primary);
+    box-shadow: 0 0 0 3px rgba(255, 123, 37, 0.2);
+}
+
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center; /* Reduced position */
+    background-size: 12px; /* Reduced size */
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px; /* Reduced padding */
+    background-color: var(--orange-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px; /* Reduced font size */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--orange-secondary);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px; /* Reduced margin */
+    font-size: 13px; /* Smaller font */
+    color: #777;
+}
+
+.footer a {
+    color: var(--orange-primary);
+    text-decoration: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); } /* Reduced animation distance */
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Further reduced padding */
+    }
+
+    .container {
+        padding: 20px; /* Even smaller padding */
+        margin: 20px auto;
+    }
+
+    .header h1 {
+        font-size: 22px; /* Further reduced font size */
+    }
+
+    .header .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .header .logo svg {
+        width: 35px;
+        height: 35px;
+    }
+}

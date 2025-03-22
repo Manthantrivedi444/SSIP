@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDANS - Disaster Duty Assignment and Notification System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <!-- Added a theme-color meta tag for browsers that support it -->
+    <meta name="theme-color" content="#FF7800">
+    <!-- Added prefers-color-scheme detection for browsers -->
+    <meta name="color-scheme" content="light dark">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="Logo1.jpg">
+                    <h1>Collector Office</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('home.letter') }}">Duty Orders</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="{{ url_for('home.about') }}">About US</a></li>
+                    <li><a href="{{ url_for('auth.login') }}" class="login-btn">Login</a></li>
+                    <!-- Theme toggle button will be inserted here by JavaScript -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Efficient Disaster Duty Assignment & Notifications</h2>
+            <p>A seamless way to assign, notify, and track disaster duty orders.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">📜 View Assigned Duties</a>
+                <a href="{{ url_for('home.letter') }}" class="btn btn-secondary">🛠️ Generate New Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Features</h2>
+                <p>Streamline disaster duty assignments with our comprehensive system</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Digital Duty Orders</h3>
+                    <p>Issue disaster duty orders with digital signatures for instant distribution.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📢</div>
+                    <h3>Automated Notifications</h3>
+                    <p>Send SMS & Email alerts to assigned staff with comprehensive duty details.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-Time Dashboard</h3>
+                    <p>Track assignments & duty schedules live with dynamic status updates.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Schedule Alerts</h3>
+                    <p>Automatic reminders before duty starts to ensure timely attendance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Search & Reports</h3>
+                    <p>Generate duty reports for better tracking and operational insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="section-title">
+                <h2>Duty Assignment Dashboard</h2>
+                <p>Monitor and manage all duty assignments in real-time</p>
+            </div>
+            <div class="dashboard-container">
+                <div class="dashboard-tabs">
+                    <div class="dashboard-tab active">Live Orders</div>
+                    <div class="dashboard-tab">Upcoming Duties</div>
+                    <div class="dashboard-tab">Completed</div>
+                </div>
+                <div class="duty-list">
+                    <div class="duty-item">
+                        <div class="duty-details">
+                            <div class="duty-title">Cyclone Warning Response Team</div>
+                            <div class="duty-meta">Assigned to: Rajesh Patel | Due: Today, 5:00 PM</div>
+                        </div>
+                        <span class="duty-status status-assigned">Assigned</span>
+                    </div>
+                    <div class="duty-item">
+                        <div class="duty-details">
+                            <div class="duty-title">Flood Relief Coordination</div>
+                            <div class="duty-meta">Assigned to: Priya Sharma | Due: Tomorrow, 9:00 AM</div>
+                        </div>
+                        <span class="duty-status status-pending">Pending</span>
+                    </div>
+                    <div class="duty-item">
+                        <div class="duty-details">
+                            <div class="duty-title">Medical Emergency Response</div>
+                            <div class="duty-meta">Assigned to: Dr. Mehta | Due: Mar 18, 2025, 6:00 AM</div>
+                        </div>
+                        <span class="duty-status status-completed">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Our streamlined process ensures efficient disaster duty management</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Admin Issues Order</h3>
+                    <p>Digitally signed & auto-distributed to assigned staff</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Staff Receives Notification</h3>
+                    <p>Email & SMS alert sent with duty details</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Duty Confirmation</h3>
+                    <p>Staff acknowledges & reports for duty</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Live Monitoring</h3>
+                    <p>Track assigned duties via dashboard</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Support Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact & Support</h2>
+                <p>We're here to help with any questions or concerns</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Helpline</h3>
+                    <p>+91 1234567890</p>
+                    <p>Available 24/7</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Support</h3>
+                    <p>support@ddans.gov.in</p>
+                    <p>Response within 24 hours</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Live Chat</h3>
+                    <p>Available during office hours</p>
+                    <p>9:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Duty Orders</a></li>
+                        <li><a href="#">Notifications</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">User Guide</a></li>
+                        <li><a href="#">Report Issues</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p>Mamlatdar Office - Gir-Somnath</p>
+                    <p>Veraval, Gujarat</p>
+                    <p>📞 Helpline: +91 1234567890</p>
+                    <p>✉️ Email: info@ddans.gov.in</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Collector Office - Gir-Somnath-Veraval. All rights reserved.</p>
+                <p>This system complies with Government of India IT regulations.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

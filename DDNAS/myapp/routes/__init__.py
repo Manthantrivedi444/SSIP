@@ -4,4 +4,5 @@ from flask import Blueprint
 auth_bp = Blueprint('auth', __name__)
 
 from .auth import *  # Import auth.py functions
+from .home import home_bp  # Ensure this line exists
 

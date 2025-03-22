@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disaster Management App</title>
-    <link rel="stylesheet" href="abstyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
                     <ul class="nav-links">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Features</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="{{ url_for('home.about') }}">About</a></li>
                         <li>
                             <button class="toggler">
                                 <i class="fas fa-moon"></i>
@@ -114,7 +114,7 @@
                             <h3></h3>
                             <p class="team-role">Backend Developer</p>
                             <p>
-                                Database admin , manages data flow and and control database . 
+                                Responsible for database administration, efficiently managing data flow and ensuring secure and database control 
                                 Also helped in frontend with html , css and js skills and suggested good ui. 
                                 He controls storing part of data
                             </p>
@@ -143,7 +143,7 @@
 
     <!-- Font Awesome for icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-    <script src="abtscr.js"></script>
+    <script src="{{ url_for('static', filename='js/about.js') }}"></script>
 </body>
 
 </html>
