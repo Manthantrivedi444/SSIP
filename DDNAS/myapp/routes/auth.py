@@ -26,6 +26,12 @@ def home():
         return redirect(url_for('auth.login'))
     return render_template('home.html')
 
+@auth_bp.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'GET':
+        return render_template('signup.html')
+    return render_template('signup.html')
+
 @auth_bp.route('/logout')
 def logout():
     session.pop('user_id', None)

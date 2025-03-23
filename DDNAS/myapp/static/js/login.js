@@ -30,4 +30,32 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         console.error("Error:", error);
         alert("An error occurred. Please try again later.");
     });
+    document.addEventListener('DOMContentLoaded', function() {
+        // Handle signup button click (alternative to onclick in HTML)
+        const signupBtn = document.querySelector('.signup-btn');
+        if (signupBtn) {
+            signupBtn.addEventListener('click', function() {
+                window.location.href = '/auth/signup';
+            });
+        }
+    
+        // Handle login form submission
+        const loginForm = document.getElementById('loginForm');
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const userId = document.getElementById('user_id').value;
+                const password = document.getElementById('password').value;
+    
+                if (!userId || !password) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+    
+                // Submit the form
+                this.submit();
+            });
+        }
+    }); 
 });

@@ -35,11 +35,16 @@
             <button type="submit" class="btn">Login</button>
         </form>
         
+        <div class="signup-section">
+            <p>Don't have an account?</p>
+            <button class="btn signup-btn" onclick="window.location.href='/auth/signup'">Sign Up</button>
+        </div>
+        
         <div class="footer">
             <p>Having trouble logging in? <a href="#">Contact support</a></p>
         </div>
     </div>
 
-    <script src="{{ url_for('static', filename='login.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
 </body>
 </html>
