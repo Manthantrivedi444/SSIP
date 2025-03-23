@@ -1,0 +1,306 @@
+:root {
+    --primary: #ff8c00;
+    --primary-light: #ffa640;
+    --bg-light: #ffffff;
+    --text-light: #333333;
+    --bg-dark: #222222;
+    --text-dark: #f0f0f0;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+.light-mode {
+    --bg: var(--bg-light);
+    --text: var(--text-light);
+    --shadow: var(--shadow-light);
+}
+
+.dark-mode {
+    --bg: var(--bg-dark);
+    --text: var(--text-dark);
+    --shadow: var(--shadow-dark);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("disaster.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow);
+    overflow: hidden;
+    padding: 30px;
+    animation: shutter 4s 1 forwards ease;
+}
+
+@keyframes shutter {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.header p {
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.theme-toggle {
+    top: 0;
+    position: absolute;
+    z-index: 2;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px var(--shadow);
+}
+
+.theme-toggle:hover {
+    background-color: var(--primary-light);
+    transform: scale(1.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: none;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 50px;
+    font-size: 1rem;
+    background-color: var(--bg);
+    color: var(--text);
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+}
+
+.form-group .placeholder-label {
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    top: 15px;
+    transition: all 0.25s ease;
+    color: #999;
+    font-size: 1rem;
+    background-color: transparent;
+    padding: 0 5px;
+}
+
+.form-control:focus~.placeholder-label,
+.form-control:not(:placeholder-shown)~.placeholder-label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.7rem;
+    color: var(--primary);
+    font-weight: 600;
+    background-color: var(--bg);
+}
+
+.form-group .floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    top: 45px;
+    transition: 0.2s ease all;
+    color: #999;
+    opacity: 0;
+}
+
+.form-control:focus~.floating-label,
+.form-control:not(:placeholder-shown)~.floating-label {
+    opacity: 1;
+    top: 15px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: var(--primary);
+}
+
+.form-control::placeholder {
+    color: transparent;
+}
+
+.form-control:focus::placeholder {
+    color: transparent;
+}
+
+select.form-control {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 10px;
+    padding-right: 35px;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(255, 140, 0, 0.3);
+}
+
+.btn:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float-animation {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Special styling for date input and select */
+input[type="date"] {
+    color: var(--text);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+    cursor: pointer;
+}
+
+.dark-mode input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+}
+
+/* Fix for select elements to match the styling */
+select.form-control {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: auto;
+}
+
+/* Additional animation for the placeholder label */
+@keyframes moveUp {
+    from {
+        top: 15px;
+        font-size: 1rem;
+    }
+
+    to {
+        top: -10px;
+        font-size: 0.7rem;
+    }
+}
+
+.form-control:focus~.placeholder-label {
+    animation: moveUp 0.25s forwards;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* Success message styling */
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(75, 181, 67, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.success-message h2 {
+    color: #4BB543;
+    margin-bottom: 10px;
+}
+
+.success-message p {
+    color: var(--text);
+}

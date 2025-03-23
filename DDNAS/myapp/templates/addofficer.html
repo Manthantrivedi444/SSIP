@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management App</title>
+    <link rel="stylesheet" href="aostyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</head>
+
+<body class="light-mode">
+    <button class="theme-toggle" id="themeToggle">
+        <span id="themeIcon">🌙</span>
+    </button>
+
+    <div class="container">
+        <div class="header">
+            <h1>Add Officer</h1>
+            <p>Please fill out the form below about officer's information to add him/her.</p>
+        </div>
+
+        <form id="userInfoForm">
+            <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="" required>
+                <span class="placeholder-label">Full Name</span>
+            </div>
+
+            <div class="form-group">
+                <input type="date" class="form-control" id="dob" required>
+                <span class="placeholder-label">Date of Birth</span>
+            </div>
+
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="" required>
+                <span class="placeholder-label">Email Address</span>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" class="form-control" id="phone" placeholder="" required>
+                <span class="placeholder-label">Phone Number</span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="address" placeholder="" required>
+                <span class="placeholder-label">Address</span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="district" placeholder="" required>
+                <span class="placeholder-label">District</span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="department" placeholder="" required>
+                <span class="placeholder-label">Department</span>
+            </div>
+
+            <div class="form-group">
+                <input type="number" class="form-control" id="age" placeholder="" min="18" required>
+                <span class="placeholder-label">Age</span>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender" required>
+                    <option value="" disabled selected>Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <span class="placeholder-label" style="opacity: 0;">Gender</span>
+            </div>
+    <button type="submit" class="btn" id="submitBtn">Add Officer</button>
+    </form>
+    </div>
+
+    <div class="success-message" id="successMessage">
+        <h2>Submission Successful!</h2>
+        <p>Thank you for providing your information.</p>
+    </div>
+    </div>
+    <script src="aojs.js"></script>
+</body>
+
+</html>
