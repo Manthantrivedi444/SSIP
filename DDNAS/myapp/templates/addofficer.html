@@ -10,10 +10,31 @@
 </head>
 
 <body class="light-mode">
-    <button class="theme-toggle" id="themeToggle">
-        <span id="themeIcon">🌙</span>
-    </button>
-
+    <div class="overlay">
+        <header>
+            <div class="container1">
+                <nav>
+                    <div class="logo">
+                        <i class="fas fa-shield-alt"></i> Disaster Management App
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">About</a></li>
+                        <li>
+                            <button id="themeToggle">
+                                <i class="fas fa-moon"></i>
+                            </button>
+                        <li><a href="#">Sign Up</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
     <div class="container">
         <div class="header">
             <h1>Add Officer</h1>
@@ -71,16 +92,11 @@
                 </select>
                 <span class="placeholder-label" style="opacity: 0;">Gender</span>
             </div>
-    <button type="submit" class="btn" id="submitBtn">Add Officer</button>
-    </form>
+            <button type="submit" class="btn" id="submitBtn">Add Officer</button>
+        </form>
     </div>
-
-    <div class="success-message" id="successMessage">
-        <h2>Submission Successful!</h2>
-        <p>Thank you for providing your information.</p>
-    </div>
-    </div>
-    <script src="aojs.js"></script>
+</div>
+<script src="aojs.js"></script>
 </body>
 
 </html>
