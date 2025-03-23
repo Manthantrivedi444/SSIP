@@ -62,6 +62,58 @@ body {
     }
 }
 
+header .container1{
+    transform:translateY(-20px);
+    background-color: var(--primary);
+    width: 100vw;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+header nav ul{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul li{
+    list-style: none;
+    margin-right: 20px;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+header .hamburger{
+    background: white;
+    display: none;
+    cursor: pointer;
+}
+header .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px auto;
+    background: white;
+    transition: all 0.3s;
+}
+#themeToggle{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
 .header {
     text-align: center;
     margin-bottom: 30px;
