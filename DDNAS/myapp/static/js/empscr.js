@@ -74,8 +74,14 @@ function renderEmployees(employees) {
                      class="profile-thumbnail">
             </td>
             <td>${employee.name}</td>
-            <td>${employee.department}</td>
+            <td>${employee.dob}</td>
+            <td>${employee.address}</td>
+            <td>${employee.email}</td>
             <td>${employee.contactNumber}</td>
+            <td>${employrr.district}</td>
+            <td>${employee.department}</td>
+            <td>${employee.gender}</td>
+            <td>${employee.age}</td>
             <td>
                 <button class="btn remove-employee" data-id="${employee.id}">Fire</button>
             </td>
