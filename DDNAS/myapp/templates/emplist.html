@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management App</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="emplistys.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <i class="fas fa-shield-alt"></i>
+            <span>Disaster Management App</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Disaster Info</a></li>
+            <li class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section id="employee-list">
+            <h1>Employee Directory</h1>
+            
+            <!-- Add Employee Button -->
+            <button id="add-employee-btn" class="btn">Hire Employee</button>
+
+            <!-- Employee Table -->
+            <div class="table-responsive">
+                <table id="employee-table">
+                    <thead>
+                        <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Contact Number</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employee-table-body">
+                        <!-- Employees will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add Employee Modal -->
+    <div id="add-employee-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Add New Employee</h2>
+            <form id="add-employee-form">
+                <div class="form-grid">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="date" name="dob" placeholder="Date of Birth" required>
+                    <input type="text" name="address" placeholder="Address" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="contact" placeholder="Contact Number" required>
+                    <input type="text" name="district" placeholder="District" required>
+                    <select name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="Rescue">Rescue</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Logistics">Logistics</option>
+                        <option value="Communication">Communication</option>
+                    </select>
+                    <select name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="file" name="profile-photo" accept="image/*">
+                </div>
+                <button type="submit" class="btn">Add Employee</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Employee Details Modal -->
+    <div id="employee-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="employee-details-content">
+                <!-- Detailed employee information will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="empscr.js"></script>
+</body>
+</html>
