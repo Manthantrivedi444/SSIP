@@ -76,9 +76,6 @@ function renderEmployees(employees) {
             <td>${employee.name}</td>
             <td>${employee.email}</td>
             <td>${employee.contactNumber}</td>
-            <td>
-                <button class="btn remove-employee" data-id="${employee.id}">Fire</button>
-            </td>
         `;
 
         // Click to view employee details
