@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ensures proper scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management App</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header section with logo and navigation -->
+    <header>
+        <!-- Logo and app name -->
+        <div class="logo">
+            <i class="fas fa-shield-alt"></i>
+            <h1>Disaster Management App</h1>
+        </div>
+        <!-- Main navigation menu -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Mobile menu toggle button (hamburger icon) -->
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Hero banner section -->
+        <section class="hero">
+            <h2>Be Prepared, Stay Safe</h2>
+            <p>A comprehensive resource for disaster preparedness and management</p>
+        </section>
+
+        <!-- About section -->
+        <section class="about">
+            <h2>About Us</h2>
+            <p>DMA is a comprehensive web-based application designed to help communities prepare for, respond to, and recover from natural disasters. Our platform provides real-time alerts, resource coordination, and emergency planning tools to ensure safety and resilience in the face of catastrophic events.</p>
+        </section>
+
+        <!-- Mission statement section -->
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>At DMA, our mission is to empower communities with the tools and information they need to effectively manage disaster situations. We believe that with proper preparation and coordination, we can significantly reduce the impact of natural disasters on lives and property.</p>
+            <p>Our application focuses on three key areas:</p>
+            <ul>
+                <li>Early warning systems and predictive analytics</li>
+                <li>Resource coordination and management</li>
+                <li>Community education and preparation</li>
+            </ul>
+        </section>
+
+        <!-- Disasters information section -->
+        <section class="disasters">
+            <!-- Natural disasters subsection -->
+            <div class="natural">
+                <h2>Natural Disasters</h2>
+                <ul>
+                    <!-- Earthquake information -->
+                    <li>
+                        <h3>Earthquakes</h3>
+                        <div class="do-dont">
+                            <!-- Do's for earthquakes -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Drop, cover, and hold on</li>
+                                    <li>Stay indoors until shaking stops</li>
+                                    <li>Have emergency supplies ready</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for earthquakes -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't run outside during shaking</li>
+                                    <li>Don't stand in doorways</li>
+                                    <li>Don't use elevators</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Flood information -->
+                    <li>
+                        <h3>Floods</h3>
+                        <div class="do-dont">
+                            <!-- Do's for floods -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Move to higher ground</li>
+                                    <li>Follow evacuation orders</li>
+                                    <li>Prepare emergency kit</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for floods -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't walk through flowing water</li>
+                                    <li>Don't drive through flooded areas</li>
+                                    <li>Don't touch electrical equipment if wet</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Tsunami information -->
+                    <li>
+                        <h3>Tsunamis</h3>
+                        <div class="do-dont">
+                            <!-- Do's for tsunamis -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Move inland or to higher ground</li>
+                                    <li>Follow evacuation routes</li>
+                                    <li>Listen to emergency broadcasts</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for tsunamis -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't stay in low-lying coastal areas</li>
+                                    <li>Don't return until authorities allow</li>
+                                    <li>Don't go to the beach to watch</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Hurricane/Cyclone information -->
+                    <li>
+                        <h3>Hurricanes/Cyclones</h3>
+                        <div class="do-dont">
+                            <!-- Do's for hurricanes -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Board up windows</li>
+                                    <li>Prepare emergency supplies</li>
+                                    <li>Follow evacuation orders</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for hurricanes -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't ignore evacuation orders</li>
+                                    <li>Don't go outside during the storm</li>
+                                    <li>Don't use candles for lighting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Tornado information -->
+                    <li>
+                        <h3>Tornadoes</h3>
+                        <div class="do-dont">
+                            <!-- Do's for tornadoes -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Seek shelter in basement or interior room</li>
+                                    <li>Cover your head</li>
+                                    <li>Listen to weather alerts</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for tornadoes -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't stay in mobile homes</li>
+                                    <li>Don't try to outrun a tornado in a vehicle</li>
+                                    <li>Don't stay near windows</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Wildfire information -->
+                    <li>
+                        <h3>Wildfires</h3>
+                        <div class="do-dont">
+                            <!-- Do's for wildfires -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Create defensible space around home</li>
+                                    <li>Follow evacuation orders immediately</li>
+                                    <li>Keep emergency supplies ready</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for wildfires -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't wait to evacuate</li>
+                                    <li>Don't leave yard debris near structures</li>
+                                    <li>Don't return until authorities say it's safe</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Landslide information -->
+                    <li>
+                        <h3>Landslides</h3>
+                        <div class="do-dont">
+                            <!-- Do's for landslides -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Be alert to signs like cracking trees or walls</li>
+                                    <li>Evacuate if told to do so</li>
+                                    <li>Contact local officials about hazards</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for landslides -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't build near steep slopes</li>
+                                    <li>Don't stay in affected areas during heavy rainfall</li>
+                                    <li>Don't ignore unusual sounds like trees cracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Volcanic eruption information -->
+                    <li>
+                        <h3>Volcanic Eruptions</h3>
+                        <div class="do-dont">
+                            <!-- Do's for volcanic eruptions -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Evacuate volcanic danger zones</li>
+                                    <li>Wear long sleeves to protect skin from ash</li>
+                                    <li>Use masks to filter ash particles</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for volcanic eruptions -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't stay in low-lying areas near the volcano</li>
+                                    <li>Don't drive in heavy ash fall</li>
+                                    <li>Don't return until authorities declare it safe</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Drought information -->
+                    <li>
+                        <h3>Droughts</h3>
+                        <div class="do-dont">
+                            <!-- Do's for droughts -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Conserve water</li>
+                                    <li>Install water-efficient fixtures</li>
+                                    <li>Follow local water restrictions</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for droughts -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't waste water on non-essential activities</li>
+                                    <li>Don't ignore leaks in plumbing</li>
+                                    <li>Don't water lawns during restrictions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Man-made disasters subsection -->
+            <div class="man-made">
+                <h2>Man-Made Disasters</h2>
+                <ul>
+                    <!-- Industrial accident information -->
+                    <li>
+                        <h3>Industrial Accidents</h3>
+                        <div class="do-dont">
+                            <!-- Do's for industrial accidents -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Follow evacuation procedures</li>
+                                    <li>Report incidents to authorities</li>
+                                    <li>Stay upwind of chemical releases</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for industrial accidents -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't ignore safety warnings</li>
+                                    <li>Don't return until it's declared safe</li>
+                                    <li>Don't touch spilled chemicals</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Chemical spill information -->
+                    <li>
+                        <h3>Chemical Spills</h3>
+                        <div class="do-dont">
+                            <!-- Do's for chemical spills -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Evacuate the area immediately</li>
+                                    <li>Call emergency services</li>
+                                    <li>Close windows and turn off ventilation if indoors</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for chemical spills -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't touch or walk through spilled chemicals</li>
+                                    <li>Don't try to clean up hazardous spills yourself</li>
+                                    <li>Don't return until authorities say it's safe</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Nuclear disaster information -->
+                    <li>
+                        <h3>Nuclear Disasters</h3>
+                        <div class="do-dont">
+                            <!-- Do's for nuclear disasters -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Take shelter in a basement or central room</li>
+                                    <li>Follow evacuation orders immediately</li>
+                                    <li>Take potassium iodide only if instructed</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for nuclear disasters -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't look at the flash of a nuclear explosion</li>
+                                    <li>Don't consume food or water that may be contaminated</li>
+                                    <li>Don't ignore official instructions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Oil spill information -->
+                    <li>
+                        <h3>Oil Spills</h3>
+                        <div class="do-dont">
+                            <!-- Do's for oil spills -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Report spills to authorities</li>
+                                    <li>Avoid contact with oil</li>
+                                    <li>Follow cleanup instructions</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for oil spills -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't use dispersants without authorization</li>
+                                    <li>Don't swim in affected water</li>
+                                    <li>Don't consume seafood from affected areas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Fire information -->
+                    <li>
+                        <h3>Fires (Urban & Industrial)</h3>
+                        <div class="do-dont">
+                            <!-- Do's for fires -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Call emergency services immediately</li>
+                                    <li>Use stairs, not elevators, during evacuation</li>
+                                    <li>Have fire extinguishers accessible</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for fires -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't try to fight large fires yourself</li>
+                                    <li>Don't hide during a fire</li>
+                                    <li>Don't go back into a burning building</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Transportation accident information -->
+                    <li>
+                        <h3>Transportation Accidents</h3>
+                        <div class="do-dont">
+                            <!-- Do's for transportation accidents -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Stay buckled/secure during transportation</li>
+                                    <li>Be aware of emergency exits</li>
+                                    <li>Follow crew instructions</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for transportation accidents -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't panic during emergencies</li>
+                                    <li>Don't block aisles with luggage</li>
+                                    <li>Don't ignore safety briefings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Pandemic information -->
+                    <li>
+                        <h3>Pandemic (COVID-19)</h3>
+                        <div class="do-dont">
+                            <!-- Do's for pandemic -->
+                            <div class="do">
+                                <h4>Do's:</h4>
+                                <ul>
+                                    <li>Wash hands frequently</li>
+                                    <li>Wear masks in crowded places</li>
+                                    <li>Maintain physical distance</li>
+                                    <li>Get vaccinated</li>
+                                </ul>
+                            </div>
+                            <!-- Don'ts for pandemic -->
+                            <div class="dont">
+                                <h4>Don'ts:</h4>
+                                <ul>
+                                    <li>Don't touch face with unwashed hands</li>
+                                    <li>Don't attend large gatherings when sick</li>
+                                    <li>Don't ignore symptoms</li>
+                                    <li>Don't share personal items</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Main footer content with columns -->
+        <div class="footer-content">
+            <!-- Contact information -->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> info@disastermanagement.app</p>
+                <p><i class="fas fa-phone"></i> +1-800-DISASTER</p>
+            </div>
+            <!-- Quick links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Emergency Resources</a></li>
+                    <li><a href="#">Training Programs</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                </ul>
+            </div>
+            <!-- Social media links -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright information -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Disaster Management App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        // Toggle navigation menu on mobile when hamburger icon is clicked
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
